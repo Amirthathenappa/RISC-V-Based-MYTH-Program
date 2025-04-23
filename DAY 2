@@ -1,0 +1,37 @@
+DAY 2
+INTRODUCTION TO ABI and BASIC VERIFICATION FLOW
+
+*ABI- Application Binary Interface
+*Interface refers to those that users can see, it is the apperance
+*similarly for a computer the apperance and the functionality are the  first interface presented to the user
+*All applications have API (Application Programming INterface) these API cinteract with the OS using the standard libraries
+*between the ISA and the machine language we have ISA
+*there is yet another interface named RTL that lies between the Architecture and the Hardware
+
+application program -> API -> Standard library -> OS -> ISA ->Architecture -> RTL ->GDSII -> Hardware
+
+*Some parsts of the ISA are available to the user and they are called USER ISA and a few are available to the OS called the USER & SYSTEM ISA
+*Application programmer can directly access the registers/Hardware of the architecture through SYSTEM CALLS
+*The way the system calls does this is ABI (Application Binary Interface)
+*ABI is also called as SYSTEM CALL INTERFACE
+
+*RISCV has 32 registers with length XLEN , XLEN=32 for RV32 and XLEN=64 for RV64
+*little-endian and big-endian memory addressing system
+*RISCV Architectures are of little-endian type
+*a loading command "ld x8,16(x23)" this will load the content of the memory(content of x23 + 16) into the register x8
+*all the instructions in RISCV are 32 bits
+*"add x8,x24,x8" this will add the content of register 8 and reg 24 and store it to reg 8
+*"sd x8, 8(x23)" sd is store double word , the content of x8 will be stored in the memory location which is the sum of the offset '9here 8) and the content of the register x23 (here it is 0)
+in the above x8 is called data register , as it is here where we have the data
+
+*instructions that operate only on registers are called R Type instructions
+*which act on immediate and registers are called as I Type instructions
+*those that store are calles S-Type instructions
+*we see that all the registers where represented by only 5 bits , and so we have 32 registers
+*each of the register is given its own internal ABI name like ZERO (hard wired zero), ra (return address), sp (stack pointer)
+gp(global pointer), tp(thread pointer),t0-2 (temporaries)...
+*it is with these ABI names that the hardware gets accessed
+
+
+LAB to re-wire C Program using ASM Language
+*ref fig1
