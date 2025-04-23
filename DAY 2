@@ -34,4 +34,33 @@ gp(global pointer), tp(thread pointer),t0-2 (temporaries)...
 
 
 LAB to re-wire C Program using ASM Language
-*ref fig1
+*ref fig1  https://docs.google.com/document/d/1YLcKgyE_XO8uibJR1G6WoN7a_xTuKduAgeIn8TWxagU/edit?usp=sharing
+
+step1: "leafpad 1to9custom.c" this is to open a .c file we can also use gedit or vim
+step2:writing the c program
+#include<stdio.h>
+extern int load(intx, int y);
+
+int main(){
+int result =0;
+int count =9;
+result=load(0x0,count+1);
+printf("sum of numbers from 1 to 9 is %d\n",count , result);
+} 
+
+step3: in the same directory also create a file named "load.S & " 
+we need to write  the contents as shown in fig2 of the same document in the load.S
+step 4:"riscv64-unknown-elf-gcc -Ofast -mabi=lp64 -march=rv64i -o 1to9custom.o 1to9custom.c load.S"
+step5: " spike pk 1to9custom.o " will give the output as sum of number from 1 to 9 is 45
+
+
+SUB LAB
+step 1: cd
+step 2: git clone https://github.com/kunalg123/riscv_workshop_collaterals.git
+the above will download some basic labs
+step 3: cd riscv_workshop_collaterals
+step 4: ls -ltr
+step 5: cd labs
+step 6:ls -ltr
+step 7 : we can either use vim picorv32.v or less picorv32.v 
+to exit from vim we need to type q and press esc button
