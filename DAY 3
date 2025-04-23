@@ -4,3 +4,17 @@ https://github.com/stevehoover/RISC-V_MYTH_Workshop
 *Logic gates - fundamental building blocs of digital circuits
 *we have Boolean Arithmetic, Boolean Calc , verilog etc.. depending on the type the representation of the digital logic will change
 this can be seen in fig 3
+
+*implementation of a multiplexer
+assign f=s?x1:x2;
+*chaining ternary operators fig 4
+
+*type "makerchip" in the browser , go into makerchip.com and launch an IDE
+*in the IDE from the top slect the tutorials and there we can see various designs 
+*and now we are going to choose FPGA Multiplier
+
+LAB- For combinational Logic
+step 1: open makerchip
+step 2:click IDE
+step 3: open tutorials , validity tutorial 
+step 4: in tutorial , click "load pythagorean Example"
