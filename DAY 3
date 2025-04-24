@@ -74,3 +74,16 @@ $bad_name_5 : bad
 
 Numberic identifier
 >>1  means ahead by 1
+
+VALIDITY
+*easier debug
+*cleaner design
+*Better error checking
+*Automated clock gating for power saving when a block is not in use
+
+*Motivation
+   *clock signals are distributed to EVERY FF
+  *Clocks toggle twice per cycle
+   *This consumes power
+*Clock gating avoids togglig clock signal
+*TL-Verilog can produce fine frained gateing / enables
