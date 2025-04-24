@@ -35,6 +35,29 @@ result in fig 6
 
 *Multiplexer in fig 7
 
-*combinational calculator 
+*combinational calculator
 
+*SEQUENTIAL LOGIC 
+*they are sequenced using clock signal
+*D FF transitions next state to current state on a rising clock edge
+and the circuit is constructed to enter a known state in response to a reset signal
+*the whole circuit seq+ comb can be viewed as a big state machine
+*fibonacci series  fig 9, fig 10   code line "   $num[31:0] = $reset ? 1 : (>>1$num + >>2$num);
+" we can see that >>1$num is previous of $num , and >>2$num is the previous previous of num
+* free running counter " $num[31:0] = $reset ? 1 : (>>1$num + >>2$num);"
+
+
+VALUES IN VERILOG
+*no.of_bits'character_depicting_the_format Value   ex: 16'hf0
+*'0  : All 0s (width based on context)
+*'X : All dont care bits
+1   : 32-bit (signed ) 1
+
+*Our simulator will zero extend or truncate when widths are mismatched (without warning)
+*uses 2-state simulation(no X'z)
+
+
+PIPELINE
+* learning with the help of Pythagoras theorem fig 11
+*pipelining will help us to run our clock faster
 
