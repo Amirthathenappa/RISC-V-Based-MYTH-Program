@@ -61,3 +61,16 @@ PIPELINE
 * learning with the help of Pythagoras theorem fig 11
 *pipelining will help us to run our clock faster
 
+
+IDENTIFIERS & TYPES
+*Type of an identifier is determined by symbol prefix and case/delinitation styple
+example $symbolPrefix_delimitation( symbol prefix is one token , and the delimitation is another token)   example   $pipe_signal
+*First token must start with two alpha characters , and if both of them are in lowe case then it is a PIPE SIGNAL
+if first alpha is uppper case and the second one is lower case then it is called CamelCase and the signal is STATE SIGNAL ( technically we call this Pascal case)
+if both the first and the second character are in upper case then this is a KEYWORD SIGNAL
+*Numbers end token
+$base64_value: good
+$bad_name_5 : bad
+
+Numberic identifier
+>>1  means ahead by 1
