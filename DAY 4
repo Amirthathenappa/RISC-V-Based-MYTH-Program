@@ -1,0 +1,22 @@
+PROGRAM COUNTER
+*points to the next instruction that is going to be executed
+
+INSTRUCTION MEMORY
+*This holds the instructions 
+
+DECODE UNIT
+*This will decode the fetched instruction for interpretation , it will 
+pick apart the fields like source instruction , destination instruction etc..
+a branch from there adds with the PC and helps in detecting and going to the branches
+
+ALU
+*operates on the data 
+
+RF Wr
+*the result so obtained from the ALU gets written in the register file
+
+along with these we have DMem Rd/Wr- this is where we load data from and store data to
+
+
+
+
