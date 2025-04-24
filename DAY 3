@@ -18,3 +18,23 @@ step 1: open makerchip
 step 2:click IDE
 step 3: open tutorials , validity tutorial 
 step 4: in tutorial , click "load pythagorean Example"
+
+LAB- Making an inverter
+step 1: open "examples" under tutorial
+step 2:Load "Makerchip default template"
+step 3:in line 16 , instead of // ,type "$out = ! $in1 ;" note the space are very important 
+note we need not declare $out and $in like in verilog 
+output of the above code is shown in fig5 of the document
+step 4: to compile press "E Menu"
+
+LAB-Operating on vectors
+* $out[4:0] creates a "vector" of 5 bits
+*trying out 
+$out[4:0] = $in1[3:0] + $in2[3:0];
+result in fig 6
+
+*Multiplexer in fig 7
+
+*combinational calculator 
+
+
